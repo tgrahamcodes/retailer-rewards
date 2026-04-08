@@ -1,0 +1,23 @@
+{
+  "name": "retail-rewards",
+  "version": "0.1.0",
+  "description": "A retailer offers rewards based on previous purchases and needs to calculate the rewards given for customer based on the transaction record.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgrahamcodes/retailer-rewards.git"
+  },
+  "author": "Tom Graham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tgrahamcodes/retailer-rewards/issues"
+  },
+  "homepage": "https://github.com/tgrahamcodes/retailer-rewards#readme",
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.7"
+  }
+}
