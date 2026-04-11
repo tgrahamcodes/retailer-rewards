@@ -1,21 +1,25 @@
 # retailer-rewards
 
-####   A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
-####   A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent between $50 and $100 in each transaction.
-####   (e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
+A retailer rewards program that awards points based on customer purchases. Customers earn 2 points for every dollar spent over $100 per transaction, plus 1 point for every dollar spent between $50 and $100 per transaction.
 
-####   Given a record of every transaction during a three-month period, calculate the reward points earned for each customer per month and total.
-####   Use React JS (do not use TypeScript)
-####   Simulate an asynchronous API call to fetch data
-####   No redux
-####   Make up a data set to best demonstrate your solution
-####   Check solution into GitHub
+Example: A $120 purchase earns 2×$20 + 1×$50 = 90 points.
 
-## Java REACT Javascript SPA REST VITE
+## Overview
 
-#### 1. Install Vite with React plugin
-#### 2. Install react (no .ts, .tsx, etc)
-#### 3. Install maven
-#### 4. Install springboot
-#### 5. Setup H2(in-memory dataset) Java Backend
-#### 6. Design the page using Adobe XD 
+Calculate reward points earned for each customer per month and total across a three-month period. This is a React SPA that simulates asynchronous API calls to fetch transaction data.
+
+## Tech Stack
+
+Built with React, JavaScript, Vite, Spring Boot, and H2 in-memory database. Designed with Adobe XD.
+
+## How to get things up and running
+
+- Install node
+Windows: `winget install node`; Mac `brew install node`; Linux `apt install node`.
+- Install Vite with React plugin
+- Install React
+- Install Maven
+- Install Spring Boot
+- Setup H2 in-memory dataset for Java backend
+- Design the page using Adobe XD
+

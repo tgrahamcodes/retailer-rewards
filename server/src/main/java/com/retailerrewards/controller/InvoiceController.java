@@ -22,9 +22,8 @@ public class InvoiceController {
         /**
          * Method to calculate reward points based on total amount.
          * 2pts per dollar over 100 + 50 points for the first 50-100
-         * 
          * @param total The total on the invoice.
-         * @return int The reward points caluated from the total.
+         * @return int The reward points calculated from the total.
          */
         private int calculatePoints(double total) {
                 int points = 0;

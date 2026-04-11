@@ -35,7 +35,7 @@ function Search() {
           Search
         </button>
       </form>
-      <p className="mt-16 text-xs italic hover:text-green-600 transition"> Customer id's that exist are: 123, 456.</p>
+      <p className="mt-16 text-xs italic hover:text-green-600 transition"> Customer id that exist are: 123, 456.</p>
     </div>
   );
 }
