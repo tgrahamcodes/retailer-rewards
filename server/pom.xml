@@ -63,7 +63,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<fork>true</fork>
 					<executable>${JAVA_HOME}/bin/javac</executable>
 					<annotationProcessorPaths>
 						<path>
@@ -88,7 +87,7 @@
 							<goal>install-node-and-npm</goal>
 						</goals>
 						<configuration>
-							<nodeVersion>v22.0.0</nodeVersion>
+							<nodeVersion>v22.12.0</nodeVersion>
 						</configuration>
 					</execution>
 					<execution>
@@ -110,6 +109,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
 				<executions>
 					<execution>
 						<id>copy-frontend</id>
@@ -118,10 +118,11 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.outputDirectory}/static</outputDirectory>
+							<outputDirectory>${project.build.directory}/static</outputDirectory>
 							<resources>
 								<resource>
-									<directory>../client/dist</directory>
+									<directory>${project.parent.basedir}/client/dist</directory>
+									<filtering>false</filtering>
 								</resource>
 							</resources>
 						</configuration>
