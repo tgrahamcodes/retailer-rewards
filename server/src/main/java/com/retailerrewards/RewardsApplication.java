@@ -8,7 +8,8 @@ public class RewardsApplication {
 
   /**
    * Main method that starts the backend of the UI.
-   * @param args
+   *
+   * @param args command-line arguments, if used
    */
   public static void main(String[] args) {
     SpringApplication.run(RewardsApplication.class, args);
