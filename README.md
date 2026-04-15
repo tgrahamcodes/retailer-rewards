@@ -14,12 +14,14 @@ Built with React, JavaScript, Vite, Spring Boot, and H2 in-memory database. Desi
 
 ## How to get things up and running
 
-- Install node
-Windows: `winget install node`; Mac `brew install node`; Linux `apt install node`.
-- Install Vite with React plugin
-- Install React
-- Install Maven
-- Install Spring Boot
-- Setup H2 in-memory dataset for Java backend
-- Design the page using Adobe XD
+- Install node (Windows: `winget install node`; Mac `brew install node`; Linux `apt install node`)
+- `cd client/`
+- `npm i`
+- `npm run dev`
 
+To run the backend:
+  - `cd server`
+  - `./mvnw spring-boot:run`
+    
+
+Naigate to localhost:5147
