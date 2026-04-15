@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 
+// =========================================================================
+// The navigation component with links to go home
+// =========================================================================
 function Navbar() {
 	return (
 		<nav className="bg-white shadow-md px-8 py-4 flex items-center justify-between">

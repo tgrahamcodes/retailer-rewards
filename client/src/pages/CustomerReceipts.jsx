@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import PropTypes from 'prop-types'
 
-// This component is to display each invoice in a card format, showing the items, prices, total, and points earned.
+// ========================================================================
+// Layout for each invoice showing the items, prices, total, and points earned.
+// ========================================================================
 function InvoiceCard({ invoice }) {
 	return (
 		<div className="bg-white shadow-md rounded-2xl p-6 flex flex-col">
@@ -48,14 +49,14 @@ function InvoiceCard({ invoice }) {
 		</div>
 	)
 }
-
-// This function is to call the API and gt the receipts from each customer.
+//=======================================================================
+// Asynchronous API call and response validation for the invoice data
+//========================================================================
 function CustomerReceipts() {
 	const { id } = useParams()
 	const [summary, setSummary] = useState(null)
 	const [error, setError] = useState(null)
 
-	// Fetch the receipts from the API by customer ID, and handle loading and errors.
 	useEffect(() => {
 		fetch(`/api/customer/${id}/invoices`)
 			.then((res) => res.json())
@@ -64,7 +65,7 @@ function CustomerReceipts() {
 					setError(`No receipts found for customer #${id}`)
 				else setSummary(data)
 			})
-			.catch(() => setError('Failed to load receipts'))
+			.catch(() => setError('Failed to load the receipts for this customer.'))
 	}, [id])
 
 	if (error) return <p className="text-center mt-10 text-red-500">{error}</p>
@@ -76,7 +77,10 @@ function CustomerReceipts() {
 				<h2 className="text-2xl font-bold text-gray-800 mb-4">
 					Receipts for <span className="text-green-600">{summary.customerName}</span>
 				</h2>
-				<div className="bg-white rounded-2xl shadow-md p-6 flex gap-12">
+				<div
+					data-testid="summary-card"
+					className="bg-white rounded-2xl shadow-md p-6 flex gap-12"
+				>
 					<div>
 						<p className="text-xs text-gray-400 uppercase mb-1">Total Spent</p>
 						<p className="text-2xl font-bold text-gray-800">
