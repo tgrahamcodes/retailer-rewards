@@ -23,5 +23,14 @@ To run the backend:
   - `cd server`
   - `./mvnw spring-boot:run`
     
+-> Naigate to localhost:5147
 
-Naigate to localhost:5147
+### Running tests:
+
+To run testing for frontend:
+  - `cd client`
+  - `npm test`
+
+To run testing for backend:
+  - `cd server`
+  - `mvn test`
