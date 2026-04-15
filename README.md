@@ -23,7 +23,7 @@ To run the backend:
   - `cd server`
   - `./mvnw spring-boot:run`
     
--> Naigate to localhost:5147
+-> Navigate to localhost:5147
 
 ### Running tests:
 
